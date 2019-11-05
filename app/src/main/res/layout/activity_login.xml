@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-173dp" />
+
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+
+        android:layout_marginEnd="120dp"
+        android:src="@drawable/lp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toTopOf="parent"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="116dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toTopOf="parent"
+        tools:layout_editor_absoluteY="418dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="10dp"
+            android:text="Username"
+            android:textSize="14sp"
+
+            ></TextView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

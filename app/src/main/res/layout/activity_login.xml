@@ -1,54 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
     <ImageView
-        android:layout_width="163dp"
-        android:layout_height="163dp"
-        android:layout_marginLeft="115dp"
-        android:layout_marginTop="240dp"
-        android:src="@drawable/lp" />
+        android:id="@+id/image_lp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/lp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
 
     <LinearLayout
-        android:layout_width="180dp"
+        android:id="@+id/ll_login"
+        android:onClick="login"
+        android:layout_width="match_parent"
         android:layout_height="128dp"
-        android:background="@color/white"
-        android:layout_marginLeft="115dp"
-        android:orientation="vertical">
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_lp"
+        app:layout_constraintVertical_bias="0.15">
 
         <EditText
-            android:layout_width="160dp"
+            android:id="@+id/hint_username"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
             android:hint="Username"
             android:inputType="text"
-            android:textSize="14dp"
-            android:textColorHint="@color/colorPrimaryDark"/>
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="14dp" />
 
         <EditText
-            android:layout_width="160dp"
+            android:id="@+id/hint_password"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:hint="Password"
-            android:inputType="text"
-            android:textSize="14dp"
-            android:textColorHint="@color/colorPrimaryDark"/>
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="14dp" />
 
         <Button
-            android:layout_width="160dp"
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
             android:background="@color/colorAccent"
             android:text="Login"
-            android:textSize="14dp"
             android:textAllCaps="false"
-            android:textColor="@color/white" />
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp" />
 
     </LinearLayout>
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

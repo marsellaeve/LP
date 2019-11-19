@@ -1,220 +1,355 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="99dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="74dp"
-        android:text="Nama Tugas"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="14dp" />
-
-    <EditText
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="86dp"
-        android:layout_marginRight="50dp"
-        android:hint="Task"
-        android:textSize="14dp"
-        android:backgroundTint="@color/colorPrimaryDark"/>
-
-    <TextView
+        android:id="@+id/text_tugas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Nama Tugas"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/hint_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="Task"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_tugas"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <TextView
+        android:id="@+id/text_koordinator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
         android:text="Nama Koordinator"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="14dp"
-        android:layout_marginTop="145dp"
-        android:layout_marginLeft="52dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hint_task"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:layout_width="320dp"
+        android:id="@+id/hint_koordinator"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="156dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:hint="Koordinator"
+        android:inputType="text"
         android:textSize="14dp"
-        android:backgroundTint="@color/colorPrimaryDark"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_koordinator"
+        app:layout_constraintVertical_bias="0.02" />
 
     <TextView
+        android:id="@+id/text_deadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
         android:text="Deadline"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="14dp"
-        android:layout_marginTop="215dp"
-        android:layout_marginLeft="52dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hint_koordinator"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:layout_width="115dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="226dp"
-        android:hint="00/00/0000"
-        android:textSize="14dp"
-        android:backgroundTint="@color/colorPrimaryDark"/>
-
-    <EditText
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="226dp"
-        android:hint="00:00"
-        android:textSize="14dp"
-        android:backgroundTint="@color/colorPrimaryDark"/>
-
-    <TextView
+    <LinearLayout
+        android:id="@+id/ll_deadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.022"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_deadline">
+
+        <EditText
+            android:id="@+id/hint_tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:ems="6"
+            android:hint="00/00/0000"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/hint_jam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="00:00"
+            android:textSize="14dp"
+            android:ems="4"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_marginLeft="24dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_deskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
         android:text="Deskripsi"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="14dp"
-        android:layout_marginTop="290dp"
-        android:layout_marginLeft="52dp"/>
-
-    <View
-        android:layout_width="305dp"
-        android:layout_height="80dp"
-        android:background="@drawable/rectangle"
-        android:layout_marginTop="310dp"
-        android:layout_marginLeft="52dp"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_deadline"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:layout_width="297dp"
-        android:layout_height="72dp"
+        android:id="@+id/hint_deskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rectangle"
         android:textSize="14dp"
-        android:layout_marginTop="314dp"
-        android:layout_marginLeft="56dp"
-        android:background="@null"
-        android:inputType="textMultiLine" />
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_deskripsi"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:id="@+id/text_subtask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="24dp"
         android:text="Subtask"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="14dp"
-        android:layout_marginTop="418dp"
-        android:layout_marginLeft="52dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hint_deskripsi"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
+        android:id="@+id/image_add1"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginTop="418dp"
-        android:layout_marginLeft="334dp"
-        android:src="@drawable/baseline_add_black_18dp" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
+        android:src="@drawable/baseline_add_black_18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/text_subtask"
+        app:layout_constraintTop_toBottomOf="@+id/hint_deskripsi"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <View
-        android:layout_width="305dp"
-        android:layout_height="30dp"
-        android:background="@drawable/rectangle"
-        android:layout_marginTop="438dp"
-        android:layout_marginLeft="52dp"
-        />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:id="@+id/hint_subtask1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="443dp"
-        android:background="@null"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rectangle"
         android:hint="Judul Subtask"
-        android:layout_marginLeft="58dp"
-        android:textSize="14dp" />
+        android:padding="5dp"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_subtask"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
+        android:id="@+id/image_remove1"
         android:layout_width="18dp"
         android:layout_height="18dp"
         android:src="@drawable/baseline_remove_black_18dp"
-        android:layout_marginTop="444dp"
-        android:layout_marginLeft="335dp"/>
+        app:layout_constraintBottom_toBottomOf="@+id/hint_subtask1"
+        app:layout_constraintEnd_toEndOf="@+id/hint_subtask1"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="@+id/hint_subtask1"
+        app:layout_constraintTop_toTopOf="@+id/hint_subtask1" />
 
     <ImageView
-        android:layout_width="18dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="471dp"
-        android:layout_marginLeft="80dp"
-        android:src="@drawable/baseline_add_black_18dp" />
+        android:id="@+id/image_add2"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:src="@drawable/baseline_add_black_18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hint_subtask1"
+        app:layout_constraintVertical_bias="0.012" />
 
-    <View
-        android:layout_width="255dp"
-        android:layout_height="70dp"
-        android:background="@drawable/rectangle"
-        android:layout_marginTop="467dp"
-        android:layout_marginLeft="102.5dp"
-        />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/ll_subtask"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Judul Subtask"
-        android:textSize="13dp"
-        android:layout_marginTop="465dp"
-        android:layout_marginLeft="103dp"
-        />
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rectangle"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_add2"
+        app:layout_constraintTop_toTopOf="@+id/text_subtask"
+        app:layout_constraintVertical_bias="0.161">
+
+        <CheckBox
+            android:id="@+id/checkbox_subtask"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="2dp"
+            android:hint="Judul Subtask"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_pj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp">
+
+            <TextView
+                android:id="@+id/text_pj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PJ:"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/hint_pj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:hint="Penanggung Jawab"
+                android:textAlignment="center"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_dl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/text_dl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deadline:"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/hint_dl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:hint="00/00/0000  00:00"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <ImageView
+        android:id="@+id/image_remove2"
         android:layout_width="18dp"
         android:layout_height="18dp"
         android:src="@drawable/baseline_remove_black_18dp"
-        android:layout_marginTop="471dp"
-        android:layout_marginLeft="335dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PJ:"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="492dp"
-        android:layout_marginLeft="135dp"
-        />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Penanggung Jawab"
-        android:layout_marginTop="494dp"
-        android:layout_marginLeft="160dp"
-        android:textSize="12dp"
-        android:background="@null"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Deadline:"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="512dp"
-        android:layout_marginLeft="135dp"
-        />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="00/00/000 00:00"
-        android:layout_marginTop="514dp"
-        android:layout_marginLeft="199dp"
-        android:textSize="12dp"
-        android:background="@null"
-        />
+        app:layout_constraintBottom_toBottomOf="@+id/ll_subtask"
+        app:layout_constraintEnd_toEndOf="@+id/ll_subtask"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="@+id/ll_subtask"
+        app:layout_constraintTop_toTopOf="@+id/ll_subtask"
+        app:layout_constraintVertical_bias="0.1" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="305dp"
-        android:layout_height="30dp"
-        android:textAllCaps="false"
+        android:id="@+id/button_buat"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
         android:background="@drawable/button_background"
-        android:layout_marginTop="560dp"
-        android:layout_marginLeft="52dp"
+        android:text="Buat"
+        android:textAllCaps="false"
         android:textColor="@color/colorWhite"
-        android:text="Buat" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_subtask"
+        app:layout_constraintVertical_bias="0.0" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

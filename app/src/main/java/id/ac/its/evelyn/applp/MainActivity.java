@@ -9,24 +9,26 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
         private RecyclerView recyclerView;
-        private AdapterActivity adapter;
-        private ArrayList<DoingActivity> TodoArrayList;
+        private ListAdapter adapter;
+        private ArrayList<Doing> TodoArrayList;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
+            getSupportActionBar().hide();
+
             addData();
             recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-            adapter = new AdapterActivity(TodoArrayList);
+            adapter = new ListAdapter(TodoArrayList);
             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
             recyclerView.setLayoutManager(layoutManager);
             recyclerView.setAdapter(adapter);
         }
         void addData(){
             TodoArrayList = new ArrayList<>();
-            TodoArrayList.add(new DoingActivity("Dimas Maulana", "1414370309", "123456789"));
-            TodoArrayList.add(new DoingActivity("Fadly Yonk", "1214234560", "987654321"));
-            TodoArrayList.add(new DoingActivity("Ariyandi Nugraha", "1214230345", "987648765"));
-            TodoArrayList.add(new DoingActivity("Aham Siswana", "1214378098", "098758124"));
+            TodoArrayList.add(new Doing("Oprec Admin", "Noel", "12 Januari 2019"));
+            TodoArrayList.add(new Doing("Oprec Admin1", "Nada", "15 Januari 2019"));
+            TodoArrayList.add(new Doing("Oprec Admin2", "Paya", "20 Januari 2019"));
+            TodoArrayList.add(new Doing("Oprec Admin3", "Teja", "10 Februati 2019"));
         }
 }

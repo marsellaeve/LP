@@ -7,23 +7,69 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.v7.widget.RecyclerView
+    <TextView
+        android:id="@+id/head_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:padding="12dp"
+        android:text="TO DO LIST"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/head_task"
+        tools:layout_editor_absoluteX="78dp">
+
+        <TextView
+            android:id="@+id/Proses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="start"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="99dp"
+            android:padding="10dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:text="Proses"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/Selesai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginEnd="0dp"
+            android:padding="10dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:text="Selesai"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Proses" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-<android.support.v7.widget.RecyclerView
-    android:id="@+id/recycler_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
-</RelativeLayout>

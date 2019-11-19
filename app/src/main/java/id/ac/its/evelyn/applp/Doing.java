@@ -1,11 +1,11 @@
 package id.ac.its.evelyn.applp;
 
-public class DoingActivity {
+public class Doing {
     private String todo;
     private String pj;
     private String deadline;
 
-    public DoingActivity(String todo, String pj, String deadline) {
+    public Doing(String todo, String pj, String deadline) {
         this.todo = todo;
         this.pj = pj;
         this.deadline = deadline;

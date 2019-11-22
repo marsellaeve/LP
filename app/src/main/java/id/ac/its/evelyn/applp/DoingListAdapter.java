@@ -13,22 +13,23 @@ import java.util.ArrayList;
  * Created by Dimas Maulana on 5/26/17.
  * Email : araymaulana66@gmail.com
  */
-public class AdapterActivity extends RecyclerView.Adapter<AdapterActivity.TodoViewHolder> {
-        private ArrayList<DoingActivity> dataList;
-        public AdapterActivity(ArrayList<DoingActivity> dataList) {
+public class DoingListAdapter extends RecyclerView.Adapter<DoingListAdapter.ListViewHolder> {
+        private ArrayList<Doing> dataList;
+        public DoingListAdapter(ArrayList<Doing> dataList) {
             this.dataList = dataList;
         }
         @Override
-        public TodoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public ListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-            View view = layoutInflater.inflate(R.layout.row_todo, parent, false);
-            return new TodoViewHolder(view);
+            View view = layoutInflater.inflate(R.layout.list_item, parent, false);
+            return new ListViewHolder(view);
         }
         @Override
-        public void onBindViewHolder(TodoViewHolder holder, int position) {
+        public void onBindViewHolder(ListViewHolder holder, int position) {
             holder.txtTodo.setText(dataList.get(position).getTodo());
             holder.txtPj.setText(dataList.get(position).getPj());
             holder.txtDeadline.setText(dataList.get(position).getDeadline());
+            holder.txtTanda.setText(dataList.get(position).getDonetask()+"/"+dataList.get(position).getTotaltask());
         }
         @Override
         public int getItemCount() {
@@ -36,15 +37,16 @@ public class AdapterActivity extends RecyclerView.Adapter<AdapterActivity.TodoVi
         }
 
 
-        public class TodoViewHolder extends RecyclerView.ViewHolder{
-            private TextView txtTodo, txtPj, txtDeadline;
+        public class ListViewHolder extends RecyclerView.ViewHolder{
+            private TextView txtTodo, txtPj, txtDeadline,txtTanda;
 
-            public TodoViewHolder(View itemView) {
+            public ListViewHolder(View itemView) {
                 super(itemView);
-                txtTodo = (TextView) itemView.findViewById(R.id.txt_todo);
+                txtTodo = (TextView) itemView.findViewById(R.id.txt_task);
                 txtPj = (TextView) itemView.findViewById(R.id.txt_pj);
                 txtDeadline = (TextView) itemView.findViewById(R.id.txt_deadline);
+                txtTanda = (TextView) itemView.findViewById(R.id.tanda);
             }
         }
-    }
+
 }

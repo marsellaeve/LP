@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -10,8 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
@@ -20,12 +19,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="14dp"
-            android:text="Tugas Baru"
+            android:text="Edit Tugas"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.5" />
@@ -37,6 +36,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:onClick="Home"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.96"/>
 
@@ -79,14 +79,14 @@
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
         android:backgroundTint="@color/colorPrimaryDark"
-        android:hint="Task"
+        android:hint="Oprec Admin"
+        android:textColorHint="@color/colorPrimaryDark"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/text_tugas"
         app:layout_constraintVertical_bias="0.018" />
-
     <TextView
         android:id="@+id/text_koordinator"
         android:layout_width="wrap_content"
@@ -115,7 +115,8 @@
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
         android:backgroundTint="@color/colorPrimaryDark"
-        android:hint="Koordinator"
+        android:hint="Teja"
+        android:textColorHint="@color/colorPrimaryDark"
         android:inputType="text"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -165,6 +166,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimaryDark"
             android:ems="6"
+            android:textColorHint="@color/colorPrimaryDark"
             android:hint="00/00/0000"
             android:textSize="14dp" />
 
@@ -173,13 +175,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="00:00"
+            android:textColorHint="@color/colorPrimaryDark"
             android:textSize="14dp"
             android:ems="4"
             android:backgroundTint="@color/colorPrimaryDark"
             android:layout_marginLeft="24dp"/>
 
     </LinearLayout>
-
     <TextView
         android:id="@+id/text_deskripsi"
         android:layout_width="wrap_content"
@@ -209,6 +211,9 @@
         android:layout_marginRight="50dp"
         android:background="@drawable/rectangle"
         android:textSize="14dp"
+        android:padding="4dp"
+        android:hint="Mencari admin baru untuk laboratorium pemrograman, menentukan tugas calon admin, dan menilai calon admin."
+        android:textColorHint="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -255,7 +260,8 @@
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:background="@drawable/rectangle"
-        android:hint="Judul Subtask"
+        android:hint="Branding"
+        android:textColorHint="@color/colorPrimaryDark"
         android:padding="5dp"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -274,7 +280,6 @@
         app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="@+id/hint_subtask1"
         app:layout_constraintTop_toTopOf="@+id/hint_subtask1" />
-
     <ImageView
         android:id="@+id/image_add2"
         android:layout_width="16dp"
@@ -310,7 +315,8 @@
             android:layout_width="wrap_content"
             android:layout_height="24dp"
             android:layout_marginTop="2dp"
-            android:hint="Judul Subtask"
+            android:hint="Buat post dan caption"
+            android:textColorHint="@color/colorPrimaryDark"
             android:textSize="14dp" />
 
         <LinearLayout
@@ -334,7 +340,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:background="@null"
-                android:hint="Penanggung Jawab"
+                android:hint="Teja"
+                android:textColorHint="@color/colorPrimaryDark"
                 android:textAlignment="center"
                 android:textSize="12dp" />
 
@@ -360,6 +367,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:background="@null"
+                android:textColorHint="@color/colorPrimaryDark"
                 android:hint="00/00/0000  00:00"
                 android:textSize="12dp" />
 
@@ -388,9 +396,9 @@
         android:layout_marginTop="56dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:onClick="silang"
         android:background="@drawable/button_background"
         android:text="Buat"
+        android:onClick="Home"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -398,6 +406,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_subtask"
         app:layout_constraintVertical_bias="0.0" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

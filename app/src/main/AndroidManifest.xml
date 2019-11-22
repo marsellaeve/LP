@@ -10,8 +10,12 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
         </activity>
+
+        <activity android:name=".EditActivity">
+        </activity>
         <activity android:name=".DeskripsiActivity">
         </activity>
+        <activity android:name=".DoneActivity"></activity>
         <activity android:name=".CreateActivity"></activity>
         <activity android:name=".LoginActivity">
             <intent-filter>
